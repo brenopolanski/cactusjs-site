@@ -1,0 +1,155 @@
+/* ------------------------------------------------------------------------------------------------------------------
+    Description : Stylesheet essential for marking and viewing website CactusJS - HTML5 Game Framework
+    Version     : 1.0        
+    Last Update : 27 October, 2013
+    Author      : Breno Polanski - brenopolanski@gmail.com - www.brenopolanski.com
+---------------------------------------------------------------------------------------------------------------------
+
+SUBTILES:
+
+    0. GLOBAL
+    	- 0.1. FONT FACE
+    	- 0.2. FORK ME ON GITHUB 
+    1. KEYFRAMES
+    	- 1.1. BLINK
+    2. ELEMENTS SITE
+    	- 2.1. TITLE PROJECT
+    	- 2.2. TEXT DEVELOPED
+    	- 2.3. IMAGE CACTUS
+
+--------------------------------------------------------------------------------------------------------------------- */
+
+/* ==========================================================================
+   0. GLOBAL
+   ========================================================================== */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font-size: 100%;
+	background: white;
+}
+
+/* 0.1. FONT FACE
+   ========================================================================== */
+
+@font-face {
+    font-family: 'existencelight';
+    src: url('../fonts/existence-light-webfont.eot');
+    src: url('../fonts/existence-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/existence-light-webfont.woff') format('woff'),
+         url('../fonts/existence-light-webfont.ttf') format('truetype'),
+         url('../fonts/existence-light-webfont.svg#existencelight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: "Silkscreen";
+  src: url('../fonts/silkscreen.woff') format('woff'),
+       url('../fonts/silkscreen.ttf') format('truetype');
+}
+
+/* 0.2. FORK ME ON GITHUB
+   ========================================================================== */
+
+.fork-ribbon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+}
+
+/* ==========================================================================
+   1. KEYFRAMES
+   ========================================================================== */
+
+/* 1.1. BLINK
+   ========================================================================== */
+
+@-webkit-keyframes blink {
+	0%   { opacity: 1; }
+	80%  { opacity: 1; }
+	81%  { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes blink {
+	0%   { opacity: 1; }
+	80%  { opacity: 1; }
+	81%  { opacity: 0; }
+	100% { opacity: 0; }
+}
+@keyframes blink {
+	0%   { opacity: 1; }
+	80%  { opacity: 1; }
+	81%  { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+/* ==========================================================================
+   2. ELEMENTS SITE
+   ========================================================================== */
+
+.container {
+	margin: 0 auto;
+}
+
+/* 2.1. TITLE PROJECT
+   ========================================================================== */
+
+.title-project {
+	font: normal 4.375rem 'existencelight', Sans-Serif;
+	text-align: center;
+	line-height: .7em;
+	margin: 50px auto;
+}
+
+.title-project > span {
+	color: #1dcd2d;
+}
+
+.title-project > span:nth-child(1):after {
+	content: '';
+	display: block;
+}
+
+.title-project > span:nth-child(2) {
+	font-size: 1.875rem;
+}
+
+.title-project > span:nth-child(2):before {
+	content: 'HTML5 ';
+	color: #000;
+}
+
+/* 2.2. TEXT DEVELOPED
+   ========================================================================== */
+
+.developed {
+	position: absolute;
+	font: normal 1.5625rem 'Silkscreen', Sans-Serif;
+	top: 50%;
+	left: 50%;
+	margin-left: -100px;
+	-webkit-animation: blink 1s infinite;
+	-moz-animation: blink 1s infinite;
+	animation: blink 1s infinite;
+}
+
+/* 2.3. IMAGE CACTUS
+   ========================================================================== */
+
+.img-cactus {
+	position: absolute;
+	bottom: 50px;
+	left: 50px;
+}
